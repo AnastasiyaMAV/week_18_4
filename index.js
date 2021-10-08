@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 addBtn.addEventListener("click", () => {
+    if (!noteField.value) return;
     arrayNote.push(noteField.value);
     localStorage.setItem('note', JSON.stringify(arrayNote));
     createNote(noteField.value);
